@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="melbourne.css">-->
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Group 15</title>
+</head>
+
+<style>
+	.fullscreenvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+}
+ 
+.videocontainer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100; 
+}
+ 
+.videocontainer:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: rgba(25,29,34,.65);
+}
+	
+div{
+    text-align: center;
+/*    font-family: "Times New Roman", Times, serif;*/
+	color: whitesmoke
+}
+
+.part1, .part2, .part3, .part4, .part5{
+    margin-bottom: 50px;
+}
+
+.mel{
+    width: 80%;
+}
+
+h2{
+    font-size: 40px;
+	color: whitesmoke
+}
+	
+
+
+video{
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.subTitle{
+    font-size: 25px;
+	color: whitesmoke
+}
+
+#listTit{
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke
+}
+
+#listCon{
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 20px;
+    color: whitesmoke
+}
+
+button {
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.roleimg{
+    width: 30%;
+    float: left;
+}
+
+.role{
+    margin-right: 80px;
+    margin-top: 30px;
+}
+
+#member{
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#map {
+        position: relative;
+	height: 660px;
+
+      }	
+		.container{
+			max-width: 1000px;
+		}
+	.mapboxgl-map {
+		overflow: inherit;
+	}
+.row{
+/*    display: table;*/
+/*
+    width: 200px;
+	height: 20px;
+*/
+    margin: 1px auto;
+    font-family: sans-serif;
+    background: white;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0,0,50,0.3);
+}
+.table-head{
+    background: #8665f7;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 550;
+}
+		
+.mapboxgl-popup-content h3 {
+  background: #91c949;
+  color: #fff;
+  display: block;
+  border-radius: 5px 5px 0 0;
+  font-weight: 200;
+	font-size: 15px;
+	padding: 5px 10px;
+	margin: 0px;
+	width: 300px;
+}
+.mapboxgl-popup-content .container {
+	border-left: 1px solid #91c949;
+	border-right: 1px solid #91c949;
+	border-bottom: 1px solid #91c949;
+	padding: 10px 0;
+	border-radius: 0 0 5px 5px;
+}
+	.mapboxgl-popup-content strong{
+		color: black;
+	}
+.mapboxgl-popup-close-button {
+  display: none;
+}
+}
+.table-head .table-cell{
+    border-right: none;
+}
+.table-cell{
+/*    display: table-cell;*/
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.first-cell{
+    text-align: left;
+    padding-left: 10px;
+	width: 20%;
+}
+.last-cell{
+    border-right: none;
+	width: 80%;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+#button {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  border-radius: 3px;
+  width: 140px;
+  border: 1px solid rgba(0,0,0,0.4);
+  font-family: 'Arial', sans-serif;
+}
+#button a {
+  font-size: 13px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  text-align: center;
+}
+#button a:last-child {
+  border: none;
+}
+#button a:hover {
+  background-color: #f8f8f8;
+  color: #404040;
+}
+#button a.active {
+  background-color: #3887be;
+  color: #ffffff;
+}
+#button a.head {
+  background-color: gray;
+  color: #ffffff;
+font-weight: 200;
+	padding: 2px;
+}
+#button a.active:hover {
+  background: #3074a4;
+}
+#button a.head:hover {
+ cursor: grab;
+}
+
+	
+#button2 {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  border-radius: 3px;
+  width: 140px;
+  border: 1px solid rgba(0,0,0,0.4);
+  font-family: 'Arial', sans-serif;
+}
+#button2 a {
+  font-size: 13px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  text-align: center;
+}
+#button2 a:last-child {
+  border: none;
+}
+#button2 a:hover {
+  background-color: #f8f8f8;
+  color: #404040;
+}
+#button2 a.active {
+  background-color: #3887be;
+  color: #ffffff;
+}
+#button2 a.head {
+  background-color: gray;
+  color: #ffffff;
+font-weight: 200;
+	padding: 2px;
+}
+#button2 a.active:hover {
+  background: #3074a4;
+}
+#button2 a.head:hover {
+ cursor: grab;
+}
+	
+	
+#button3 {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  border-radius: 3px;
+  width: 140px;
+  border: 1px solid rgba(0,0,0,0.4);
+  font-family: 'Arial', sans-serif;
+}
+#button3 a {
+  font-size: 13px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  text-align: center;
+}
+#button3 a:last-child {
+  border: none;
+}
+#button3 a:hover {
+  background-color: #f8f8f8;
+  color: #404040;
+}
+#button3 a.active {
+  background-color: #3887be;
+  color: #ffffff;
+}
+#button3 a.head {
+  background-color: gray;
+  color: #ffffff;
+font-weight: 200;
+	padding: 2px;
+}
+#button3 a.active:hover {
+  background: #3074a4;
+}
+#button3 a.head:hover {
+ cursor: grab;
+}
+.map-overlay {
+/*position: absolute;*/
+bottom: 0;
+right: 0;
+background: rgba(255, 255, 255, 0.8);
+margin-right: 20px;
+font-family: Arial, sans-serif;
+overflow: auto;
+ border-radius: 3px;
+}
+
+.marker-cafe {;
+  height: 20px;
+  width: 20px;
+	border-radius: 5px;
+	border: 3px solid red;
+}
+
+.marker-takeaway {
+  height: 20px;
+  width: 20px;
+	border-radius: 5px;
+	border: 3px solid red;
+}
+
+.marker-pubs {
+  height: 20px;
+  width: 20px;
+	border-radius: 5px;
+	border: 3px solid red;
+}
+
+.marker-stop {
+  height: 20px;
+  width: 20px;
+	border-radius: 5px;
+	border: 3px solid #756bb1;
+}
+#legend {
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  left: 60px;
+  margin-top: 10px;
+	float: right;
+	position: relative;
+    z-index: 1;
+}
+	
+	.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+		margin-left: 20px;
+}
+	
+.map-overlay h3 {
+  background: #91c949;
+  color: #fff;
+  display: block;
+  border-radius: 5px 5px 0 0;
+  font-weight: 600;
+	font-size: 15px;
+	padding: 5px 10px;
+	margin: 0px;
+	width: 300px;
+}
+
+</style>
+<body>
+
+    <div class="videocontainer">
+    <video class="fullscreenvideo"  id="bgvid" playsinline="" autoplay muted loop>
+        <source src="pic/mel-back.mp4" type="video/mp4">
+    </video>
+</div>
+
+    <!-- part1 -->
+    <div class="part1"><br><br>
+        <h2>Welcome to Melbourne!</h2><br>
+        <video width="" height="" controls poster="pic/mel.jpg" >
+            <source src="pic/mel.mp4" type="video/mp4">
+        </video>
+    </div>
+<div class="part-top">
+        <h2>Top 10 places for visitors</h2><br>
+        <img src="pic/p1.png" onmouseover="upNext(this)"  width="70%" id="showpic" />
+    </div>
+
+    <!-- part2 -->
+   <div class="part2"><br><br><br><br><br>
+        <h2>Introduction</h2><br>
+        <img src='pic/intro.jpg' align="center" height="60%" width="70%"></img>
+    </div>
+
+    <!-- part3 -->
+    <div class="part3"><br><br><br>
+        <h2>We're here to help</h2><br>
+        <p id="listTit">Follow the steps below:</p>
+        <ol id="listCon">
+            <li><b>Choose the criteria: </b><i>Decide on whether you want to visit different Point of Interest places or Outdoor artworks. Select the appropriate options from the menus available.</i></li><br>
+            <li><b>Places displayed:</b> <i>The map displays the different interesting places to visit in the chosen criteria.</i></li><br>
+            <li><b>Tram Stop:</b> <i>Select the nearby tram stop to the place of interest. This will also display the tram timetable.</i></li><br>
+            <li><b>Cafes:</b> <i>Selecting the tram stop also highlights the nearby eateries available to visit. These eateries are further classified based on cafes, and restaurants, pubs and takeaway food services.</i></li><br>
+        </ol>
+        <button type="button", onclick="window.location.href='#map';">Try it out</button>
+    </div>
+
+    <!-- part4 -->
+    <div class="part4" style="width: 90%;  display: block; margin-left: auto;margin-right: auto;">
+   	  <div class="container" style="display: block">
+	<nav id="button" style="float: left;width: 170px">
+		<a class="head">Point of Interest</a>
+		<a class="active" onClick="switchA(this)" style="cursor: pointer;">Attractions<span class="legend-key" style="background:url(pic/attraction.PNG);background-repeat: no-repeat; background-size: contain; float: right; margin-top: 5px;"></span></a>
+		<a class="" onClick="switchM(this)" style="cursor: pointer;">Musuem/Gallery<span class="legend-key" style="background:url(pic/musuem.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+		<a class="" onClick="switchR(this)" style="cursor: pointer;">Railway<span class="legend-key" style="background:url(pic/rail.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+		<a class="active" onClick="switchRe(this)" style="cursor: pointer;">Recreation Facility<span class="legend-key" style="background:url(pic/recreation.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+	</nav>
+	
+	<nav id="button2" style="float: left; margin-left: 20px; width: 210px" >
+		<a class="head">Food Industry</a>
+		<a class="active" id="cafe" onClick="switchCafe(this)" style="cursor: pointer;">Cafes and Restaurants<span class="legend-key" style="background:url(pic/cafe.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+		<a class="active" id="pub" onClick="switchPub(this)" style="cursor: pointer;">Pubs, Taverns and Bars<span class="legend-key" style="background:url(pic/pub.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+		<a class="active" id="takeaway" onClick="switchTake(this)" style="cursor: pointer;">Takeaway Food Services<span class="legend-key" style="background:url(pic/takeaway.PNG);background-repeat: no-repeat; background-size: contain;float: right; margin-top: 5px;"></span></a>
+	</nav>
+	
+	<nav id="button3" style="float: left; margin-left: 20px" >
+		<a class="head">Outdoor Artworks</a>
+		<a class="active" onClick="switchMe(this)" style="cursor: pointer;">Memorials<span class="legend-key" style="background-color: #0c2c84;float: right; margin-top: 5px;"></span></a>
+		<a class="" onClick="switchS(this)" style="cursor: pointer;">Sculpture<span class="legend-key" style="background-color: #a6761d;float: right; margin-top: 5px;"></span></a>
+	</nav>
+	<div class="map-overlay" id="legend" style="display: none">
+		<div class="container">
+			<h3 id="stopName">Elizabeth Street / Flinders Street #4</h3>
+			<div class="row table-head">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">Timetable</div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row table-head">
+				<div class="col-sm-4">AM</div>
+				<div class="col-sm-8"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4" style="color: black">9</div>
+				<div class="col-sm-8" id="9am" style="color: black">20 40 60</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4" style="color: black">10 - 11</div>
+				<div class="col-sm-8" id="10am" style="color: black">20 40 60</div>
+			</div>
+			<div class="row table-head">
+				<div class="col-sm-4">PM</div>
+				<div class="col-sm-8"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4" style="color: black">12 - 8</div>
+				<div class="col-sm-8" id="12pm" style="color: black">20 40 60</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4" style="color: black">9</div>
+				<div class="col-sm-8" id="9pm" style="color: black">20 40 60</div>
+			</div>
+		</div>
+	</div>
+</div>
+   	  
+    	  <div id="map" ></div>
+    	
+    	  
+    	  
+    </div>
+  
+    
+	
+    
+
+    <!-- part6 -->
+    <div class="part6">
+        <h2>Our Team</h2>
+        <p class="subTitle">Information Visualization Project</p>
+        <div id="member">
+          <div class="role" id="role3">
+                <img src="pic/p3.jpeg" alt="profile img" class="roleimg" height="80px" width="70px">
+                <p>Fengze Sun</p>
+            </div>
+            <div class="role" id="role1">
+                <img src="pic/p4.jpeg" alt="profile img" class="roleimg" height="80px" width="70px">
+                <p>Kamakshi Banavalikar</p>
+            </div>
+            <div class="role" id="role4">
+                <img src="pic/p2.jpeg" alt="profile img" class="roleimg" height="80px" width="70px">
+                <p>Harshal Shah</p>
+            </div>
+            <div class="role" id="role2">
+                <img src="pic/p1.jpeg" alt="profile img" class="roleimg" height="80px" width="70px">
+                <p>Qinghao Zhai</p>
+            </div>
+            <div class="role" id="role5">
+                <img src="pic/p5.jpeg" alt="profile img" class="roleimg" height="80px" width="70px">
+                <p>Renjing Wang</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+<script>
+function switchCafe(e){
+	let visibility = map.getLayoutProperty('cafe', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('cafe', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('cafe', 'visibility', 'visible');
+      }
+}
+function switchPub(e){
+	let visibility = map.getLayoutProperty('pub', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('pub', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('pub', 'visibility', 'visible');
+      }
+}
+function switchTake(e){
+	let visibility = map.getLayoutProperty('takeaway', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('takeaway', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('takeaway', 'visibility', 'visible');
+      }
+}
+function switchA(e){
+	let visibility = map.getLayoutProperty('attraction', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('attraction', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('attraction', 'visibility', 'visible');
+      }
+}
+function switchM(e){
+	let visibility = map.getLayoutProperty('museum', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('museum', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('museum', 'visibility', 'visible');
+      }
+}
+function switchR(e){
+	let visibility = map.getLayoutProperty('railway', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('railway', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('railway', 'visibility', 'visible');
+      }
+}
+function switchRe(e){
+	let visibility = map.getLayoutProperty('recreation', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('recreation', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('recreation', 'visibility', 'visible');
+      }
+}
+	
+function switchRe(e){
+	let visibility = map.getLayoutProperty('recreation', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('recreation', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('recreation', 'visibility', 'visible');
+      }
+}
+	
+function switchMe(e){
+	let visibility = map.getLayoutProperty('Memorials', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('Memorials', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('Memorials', 'visibility', 'visible');
+      }
+}
+function switchS(e){
+	let visibility = map.getLayoutProperty('Sculpture', 'visibility');
+	 if (visibility === 'visible') {
+        map.setLayoutProperty('Sculpture', 'visibility', 'none');
+        e.className = '';
+      } else {
+        e.className = 'active';
+        map.setLayoutProperty('Sculpture', 'visibility', 'visible');
+      }
+}
+
+	var stations = [
+{
+  id:"station-1",
+  x:  144.96690455927876,
+  y: -37.8176316450406,
+  cafes:[
+  {
+    id:"cafe-1",
+     className: "marker-cafe",
+  x: 144.96565, 
+  y: -37.81635,
+    },
+    {
+    id:"cafe-2",
+      className: "marker-cafe",
+  x:  144.9667,
+      y:  -37.81674,
+    },
+{
+    id:"cafe-3",
+      className: "marker-cafe",
+  x:  144.96522,
+      y:  -37.814210000000000,
+    },
+{
+    id:"cafe-4",
+      className: "marker-takeaway",
+  x:  144.96523,
+      y:  -37.81507,
+    },
+{
+    id:"cafe-5",
+      className: "marker-takeaway",
+  x:  144.96662,
+      y:  -37.81374,
+    },
+{
+    id:"cafe-6",
+      className: "marker-takeaway",
+  x:  144.9656,
+      y:  -37.8166,
+    }
+  ]
+},
+{
+  id:"station-2",
+  x:  144.96447920835698, 
+  y:  -37.81832440377017,
+  cafes:[
+  {
+    id:"cafe-7",
+     className: "marker-cafe",
+  x: 144.96244, 
+  y: -37.81728,
+    },
+ {
+    id:"cafe-8",
+     className: "marker-cafe",
+  x: 144.96327, 
+  y: -37.81705,
+    },
+ {
+    id:"cafe-9",
+     className: "marker-cafe",
+  x: 144.96629, 
+  y: -37.81431,
+    },
+ {
+    id:"cafe-10",
+     className: "marker-takeaway",
+  x: 144.96401, 
+  y: -37.814890000000000,
+    }
+  ]
+},
+{
+id:"station-3",
+x: 144.9614014008424,
+y: -37.819223193078216,
+cafes:[
+ {
+    id:"cafe-11",
+     className: "marker-cafe",
+  x: 144.96338, 
+  y: -37.82092,
+    },
+ {
+    id:"cafe-12",
+     className: "marker-cafe",
+  x: 144.95835, 
+  y: -37.82315,
+    },
+ {
+    id:"cafe-13",
+     className: "marker-cafe",
+  x: 144.96358, 
+  y: -37.823480000000000,
+    },
+ {
+    id:"cafe-14",
+     className: "marker-takeaway",
+  x: 144.96081, 
+  y: -37.81615,
+    }
+]
+},
+{
+id:"station-4",
+x: 144.95786314283018,
+y: -37.820237786732406,
+cafes:[
+ {
+    id:"cafe-15",
+     className: "marker-cafe",
+  x: 144.95666, 
+  y: -37.81987,
+    },
+ {
+    id:"cafe-16",
+     className: "marker-cafe",
+  x: 144.95861000000000, 
+  y: -37.825760000000000,
+    },
+ {
+    id:"cafe-17",
+     className: "marker-cafe",
+  x: 144.96218000000000, 
+  y: -37.82172,
+    },
+ {
+    id:"cafe-18",
+     className: "marker-cafe",
+  x: 144.95835, 
+  y: -37.82315,
+    },
+ {
+    id:"cafe-19",
+     className: "marker-cafe",
+  x: 144.95835, 
+  y: -37.82315,
+    },
+ {
+    id:"cafe-20",
+     className: "marker-cafe",
+  x: 144.95934, 
+  y: -37.827870000000000,
+    },
+ {
+    id:"cafe-21",
+     className: "marker-cafe",
+  x: 144.95747, 
+  y: -37.81953,
+    },
+ {
+    id:"cafe-22",
+     className: "marker-cafe",
+  x: 144.95835, 
+  y: -37.82315,
+    },
+ {
+    id:"cafe-23",
+     className: "marker-cafe",
+  x: 144.95835, 
+  y: -37.82315,
+    }
+]
+},
+{
+id:"station-5",
+x: 144.95546153614245,
+y: -37.82097269970028,
+cafes:[
+ {
+    id:"cafe-24",
+     className: "marker-pubs",
+  x: 144.95535, 
+  y: -37.81742,
+    },
+ {
+    id:"cafe-25",
+     className: "marker-cafe",
+  x: 144.95739, 
+  y: -37.81532,
+    },
+ {
+    id:"cafe-26",
+     className: "marker-pubs",
+  x: 144.95523, 
+  y: -37.81687,
+    },
+ {
+    id:"cafe-27",
+     className: "marker-cafe",
+  x: 144.95435, 
+  y: -37.81868,
+    },
+ {
+    id:"cafe-28",
+     className: "marker-cafe",
+  x: 144.95584, 
+  y: -37.81824,
+    },
+ {
+    id:"cafe-29",
+     className: "marker-cafe",
+  x: 144.9533, 
+  y: -37.81625,
+    },
+ {
+    id:"cafe-30",
+     className: "marker-cafe",
+  x: 144.9549, 
+  y: -37.81803,
+    }
+]
+},
+{
+id:"station-6",
+x :144.95356912978238,
+y : -37.821539117626855,
+cafes:[
+ {
+    id:"cafe-31",
+     className: "marker-cafe",
+  x: 144.95354, 
+  y: -37.82257,
+    }
+]
+},
+{
+id:"station-7",
+x: 144.95109855638137,
+y: - 37.82190465062153,
+cafes:[
+
+]
+},
+{
+id:"station-8",
+x: 144.94773306350976,
+y: - 37.82215722680455,
+cafes:[
+
+]
+},
+{
+id:"station-9",
+x: 144.94650837136655,
+y: -37.81865571347738,
+cafes:[
+{
+    id:"cafe-31",
+     className: "marker-cafe",
+  x: 144.94232, 
+  y: -37.82059,
+    },
+{
+    id:"cafe-32",
+     className: "marker-cafe",
+  x: 144.94346000000000, 
+  y: -37.82045,
+    },
+{
+    id:"cafe-33",
+     className: "marker-cafe",
+  x: 144.94502, 
+  y: -37.82101,
+    },
+{
+    id:"cafe-34",
+     className: "marker-cafe",
+  x: 144.94562, 
+  y: -37.81974,
+    },
+{
+    id:"cafe-35",
+     className: "marker-cafe",
+  x: 144.94232, 
+  y: -37.82059,
+    },
+
+
+{
+    id:"cafe-38",
+     className: "marker-takeaway",
+  x: 144.94312, 
+  y: -37.81977,
+    }
+
+]
+},
+{
+id:"station-10",
+x: 144.94512063442605,
+y: -37.815426586135686,
+cafes:
+[
+{
+ id:"cafe-40",
+     className: "marker-cafe",
+  x: 144.94363, 
+  y: -37.8165,
+}
+]
+},
+{
+id:"station-11",
+x: 144.94137823870162,
+y: -37.813414856197724,
+cafes:[
+{
+    id:"cafe-37",
+     className: "marker-cafe",
+  x: 144.9402, 
+  y: -37.81429,
+    },
+{
+    id:"cafe-36",
+     className: "marker-cafe",
+  x: 144.94184000000000, 
+  y: -37.81515,
+    }
+
+]
+},
+{
+id:"station-12",
+x: 144.938645561825,
+y: -37.81446456487213,
+cafes:
+[
+{
+ id:"cafe-41",
+     className: "marker-cafe",
+  x: 144.93776, 
+  y: -37.81317,
+}
+]
+},
+{
+id:"station-13",
+x: 144.94655055842398,
+y: -37.81459178286981,
+cafes:
+[
+]
+},
+{
+id:"station-14",
+x: 144.95149406686252,
+y: -37.8131808636857,
+cafes:[
+{
+ id:"cafe-44",
+     className: "marker-cafe",
+  x: 144.95044, 
+  y: -37.81191,
+}
+]
+},
+{
+id:"station-15",
+x: 144.95393532833103,
+y: -37.812487918072826,
+cafes:[
+{
+ id:"cafe-45",
+     className: "marker-cafe",
+  x: 144.9524, 
+  y: -37.807520000000000,
+},
+{
+ id:"cafe-46",
+     className: "marker-cafe",
+  x: 144.95292, 
+  y: -37.81111,
+}
+]
+
+},
+{
+id:"station-16",
+x: 144.95644059700524,
+y: -37.811771476718356,
+cafes:
+[
+{
+ id:"cafe-47",
+     className: "marker-cafe",
+  x: 144.95877, 
+  y: -37.81496,
+},
+{
+ id:"cafe-48",
+     className: "marker-takeaway",
+  x: 144.95707, 
+  y: -37.81465,
+}
+]
+},
+{
+id:"station-17",
+x: 144.95891745116262,
+y: -37.811059280608475,
+cafes:
+[
+{
+ id:"cafe-49",
+     className: "marker-cafe",
+  x: 144.95908, 
+  y: -37.81043,
+}
+]
+},
+{
+id:"station-18",
+x: 144.96136850025573,
+y: -37.810354377085794,
+cafes:
+[
+{
+ id:"cafe-50",
+     className: "marker-cafe",
+  x: 144.96178, 
+  y: -37.81367,
+},
+{
+ id:"cafe-51",
+     className: "marker-cafe",
+  x: 144.96145, 
+  y: -37.81288,
+},
+{
+ id:"cafe-52",
+     className: "marker-cafe",
+  x: 144.95882, 
+  y: -37.801560000000000,
+},
+{
+ id:"cafe-53",
+     className: "marker-takeaway",
+  x: 144.95815, 
+  y: -37.80444,
+}
+]
+},
+{
+id:"station-19",
+x: 144.96384957029932,
+y: -37.80961884837298,
+cafes:
+[
+{
+ id:"cafe-54",
+     className: "marker-cafe",
+  x: 144.95739, 
+  y: -37.81532,
+},
+{
+ id:"cafe-55",
+     className: "marker-cafe",
+  x: 144.9617, 
+  y: -37.80322,
+},
+{
+ id:"cafe-56",
+     className: "marker-cafe",
+  x: 144.96417, 
+  y: -37.81102,
+},
+{
+ id:"cafe-57",
+     className: "marker-cafe",
+  x: 144.96124, 
+  y: -37.79675,
+},
+{
+ id:"cafe-58",
+     className: "marker-cafe",
+  x: 144.96318, 
+  y: -37.80896,
+}
+]
+},
+{
+id:"station-20",
+x: 144.96634474519394,
+y: -37.80887699825521,
+cafes:
+[
+{
+ id:"cafe-59",
+     className: "marker-cafe",
+  x: 144.96647, 
+  y: -37.80166,
+},
+{
+ id:"cafe-60",
+     className: "marker-cafe",
+  x: 144.96727000000000, 
+  y: -37.81242,
+},
+{
+ id:"cafe-61",
+     className: "marker-cafe",
+  x: 144.96695, 
+  y: -37.81219,
+},
+{
+ id:"cafe-62",
+     className: "marker-cafe",
+  x: 144.96474000000000, 
+  y: -37.8123,
+},
+{
+ id:"cafe-63",
+     className: "marker-cafe",
+  x: 144.96645, 
+  y: -37.80129,
+},
+{
+ id:"cafe-64",
+     className: "marker-cafe",
+  x: 144.96649, 
+  y: -37.801560000000000,
+},
+{
+ id:"cafe-65",
+     className: "marker-cafe",
+  x: 144.97104, 
+  y: -37.79605,
+},
+{
+ id:"cafe-66",
+     className: "marker-cafe",
+  x: 144.96296, 
+  y: -37.80404,
+},
+{
+ id:"cafe-67",
+     className: "marker-cafe",
+  x: 144.96694, 
+  y: -37.81187,
+},
+{
+ id:"cafe-68",
+     className: "marker-cafe",
+  x: 144.96884, 
+  y: -37.812020000000000,
+},
+{
+ id:"cafe-69",
+     className: "marker-cafe",
+  x: 144.96714, 
+  y: -37.80219,
+},
+{
+ id:"cafe-70",
+     className: "marker-cafe",
+  x: 144.96667, 
+  y: -37.8009,
+},
+{
+ id:"cafe-71",
+     className: "marker-cafe",
+  x: 144.96737, 
+  y: -37.81057,
+},
+{
+ id:"cafe-72",
+     className: "marker-cafe",
+  x: 144.96927, 
+  y: -37.797780000000000,
+},
+{
+ id:"cafe-73",
+     className: "marker-cafe",
+  x: 144.95928, 
+  y: -37.80023,
+},
+{
+ id:"cafe-74",
+     className: "marker-cafe",
+  x: 144.96723, 
+  y: -37.801630000000000,
+},
+{
+ id:"cafe-75",
+     className: "marker-cafe",
+  x: 144.96687, 
+  y: -37.812670000000000,
+},
+{
+ id:"cafe-76",
+     className: "marker-cafe",
+  x: 144.96364, 
+  y: -37.80431,
+},
+{
+ id:"cafe-77",
+     className: "marker-takeaway",
+  x: 144.96729, 
+  y: -37.802620000000000,
+},
+{
+ id:"cafe-78",
+     className: "marker-takeaway",
+  x: 144.96679, 
+  y: -37.79978,
+}
+]
+},
+{
+id:"station-21",
+x: 144.96879323779422,
+y: -37.808148960703896,
+cafes:
+[
+{
+ id:"cafe-79",
+     className: "marker-cafe",
+  x: 144.96998, 
+  y: -37.80942,
+},
+{
+ id:"cafe-80",
+     className: "marker-cafe",
+  x:144.97118, 
+  y: -37.79523,
+}
+]
+},
+{
+id:"station-22",
+x: 144.97070054175296,
+y:-37.80760292962929 ,
+cafes:
+[
+]
+},
+{
+id:"station-23",
+x: 144.97310365001968,
+y: -37.80801062631204,
+cafes:
+[
+]
+},
+{
+id:"station-24",
+x: 144.97291405751537,
+y: -37.80956201428191,
+cafes:
+[
+]
+},
+{
+id:"station-25",
+x: 144.97406360491075,
+y: -37.813581167902754,
+cafes:
+[
+{
+ id:"cafe-81",
+     className: "marker-cafe",
+  x: 144.97235, 
+  y: -37.81208,
+}
+]
+},
+{
+id:"station-26",
+x: 144.97453393804187,
+y: -37.81538859129167,
+cafes:
+[
+]
+},
+{
+id:"station-27",
+x: 144.97196946163052,
+y: -37.81614537491179,
+cafes:
+[
+{
+ id:"cafe-82",
+     className: "marker-cafe",
+  x: 144.97028, 
+  y: -37.81402,
+},
+{
+ id:"cafe-83",
+     className: "marker-cafe",
+  x: 144.97011, 
+  y: -37.81281,
+}
+]
+},
+{
+id:"station-28",
+x: 144.97015587085124,
+y: -37.81667338583987,
+cafes:
+[
+{
+ id:"cafe-84",
+     className: "marker-cafe",
+  x: 144.96776, 
+  y: -37.81317,
+},
+{
+ id:"cafe-85",
+     className: "marker-cafe",
+  x: 144.97051000000000, 
+  y: -37.815670000000000,
+},
+{
+ id:"cafe-86",
+     className: "marker-cafe",
+  x: 144.96876, 
+  y: -37.81545,
+},
+{
+ id:"cafe-87",
+     className: "marker-takeaway",
+  x: 144.96785, 
+  y: -37.8145,
+},
+{
+ id:"cafe-88",
+     className: "marker-takeaway",
+  x: 144.96982, 
+  y: -37.81779,
+},
+{
+ id:"cafe-89",
+     className: "marker-pubs",
+  x: 144.96785, 
+  y: -37.8145,
+}
+]
+},
+]
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibWlydWFjbGUiLCJhIjoiY2tleDJjeHp4MGNvczMycGY0OTZhMm1idiJ9.54K-cI1oXTp0S85bIr1U2Q';
+
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: "mapbox://styles/mapbox/streets-v11",
+  /* style: 'mapbox://styles/miruacle/ckexsy4290rw919pcvegzlhrg', */
+  center: [144.96, -37.81],
+  zoom: 13
+});
+map.on('load', function() {
+	map.addLayer({
+		id: "tram_route",
+      	type: 'line',
+      	source: {
+			type: 'vector',
+        	url: 'mapbox://miruacle.civuv26r'
+		},
+      	'source-layer': 'City_Circle_tram_route-1pzci3',
+      	"paint": {
+			'line-width': 3,
+			'line-color': '#78c021'
+      	}
+	});
+	map.addLayer({
+		'id': 'tram_stop',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.22jld1ty'
+		  },
+		'source-layer':'City_Circle_tram_stops_with_t-1nwbme',
+		'layout': {
+			'icon-image': 'singapore-mrt',
+			'icon-allow-overlap': true
+		},
+	});
+	
+	map.addLayer({
+		'id': 'tram_stop1',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.22jld1ty'
+		  },
+		'source-layer':'City_Circle_tram_stops_with_t-1nwbme',
+		'layout': {
+			'icon-image': 'singapore-mrt',
+			'icon-allow-overlap': true
+		},
+	});
+	
+	map.addLayer({
+		'id': 'railway',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.b6pxfa77'
+		  },
+		'source-layer':'POI1-cqdqy5',
+		'layout': {
+			'icon-image': 'rail',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Classification', 'Railway']
+	});
+	
+	map.addLayer({
+		'id': 'recreation',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.b6pxfa77'
+		  },
+		'source-layer':'POI1-cqdqy5',
+		'layout': {
+			'icon-image': 'park-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Classification', 'Recreation Facility']
+	});
+	
+	map.addLayer({
+		'id': 'museum',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.b6pxfa77'
+		  },
+		'source-layer':'POI1-cqdqy5',
+		'layout': {
+			'icon-image': 'museum-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Classification', 'Art Museum']
+	});
+	
+	map.addLayer({
+		'id': 'attraction',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.b6pxfa77'
+		  },
+		'source-layer':'POI1-cqdqy5',
+		'layout': {
+			'icon-image': 'attraction-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Classification', 'Attractions']
+	});
+	
+	map.addLayer({
+		id: "Sculpture",
+      	type: 'circle',
+      	source: {
+			type: 'vector',
+        	url: 'mapbox://miruacle.b2sexjdb'
+		},
+      	'source-layer': 'Outdoor_artworks-6i8g1l',
+      	"paint": {
+			'circle-radius': {
+				'base': 1.75,
+				'stops': [
+					[12, 3],
+					[22, 180]
+				]
+			},
+			'circle-color': '#a6761d'
+      	},
+		'filter': ['==', 'classification', 'Sculpture']
+	});
+	map.addLayer({
+		id: "Memorials",
+      	type: 'circle',
+      	source: {
+			type: 'vector',
+        	url: 'mapbox://miruacle.b2sexjdb'
+		},
+      	'source-layer': 'Outdoor_artworks-6i8g1l',
+      	"paint": {
+			'circle-radius': {
+				'base': 1.75,
+				'stops': [
+					[12, 3],
+					[22, 180]
+				]
+			},
+			'circle-color': "#0c2c84"
+      	},
+		'filter': ['==', 'classification', 'Memorials']
+	});
+	
+	map.addLayer({
+		'id': 'pub',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.7iyw6ndx'
+		  },
+		'source-layer':'newcsv_mcc-8zgnax',
+		'layout': {
+			'icon-image': 'music-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Industry (ANZSIC4) description', 'Pubs, Taverns and Bars']
+	});
+	map.addLayer({
+		'id': 'cafe',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.7iyw6ndx'
+		  },
+		'source-layer':'newcsv_mcc-8zgnax',
+		'layout': {
+			'icon-image': 'cafe-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Industry (ANZSIC4) description', 'Cafes and Restaurants']
+	});
+	map.addLayer({
+		'id': 'takeaway',
+		'type': 'symbol',
+		'source': {
+			type: 'vector',
+			url: 'mapbox://miruacle.7iyw6ndx'
+		  },
+		'source-layer':'newcsv_mcc-8zgnax',
+		'layout': {
+			'icon-image': 'car-15',
+			'icon-allow-overlap': true
+		},
+		'filter': ['==', 'Industry (ANZSIC4) description', 'Takeaway Food Services']
+	});
+	map.setLayoutProperty('poi-label', 'visibility', 'none');
+	map.setLayoutProperty('transit-label', 'visibility', 'none');
+	map.setLayoutProperty('road-number-shield', 'visibility', 'none');
+	map.setLayoutProperty('railway', 'visibility', 'none');
+	map.setLayoutProperty('road-exit-shield', 'visibility', 'none');
+	map.setLayoutProperty('road-number-shield', 'visibility', 'none');
+	map.setLayoutProperty('road-label', 'visibility', 'none');
+	map.setLayoutProperty('museum', 'visibility', 'none');
+	map.setLayoutProperty('Sculpture', 'visibility', 'none');
+
+		var checks = 0;
+		map.on('click', 'tram_stop', function (e){
+			var coordinates = e.features[0].geometry.coordinates.slice();
+
+			var lat = e.lngLat.lat;
+			var lng = e.lngLat.lng
+			if(document.getElementById("pub").className == "active" && document.getElementById("cafe").className == "active" && document.getElementById("takeaway").className == "active"){
+				for (i=0;i<stations.length;i++) {
+					if (Math.abs(stations[i].x - e.lngLat.lng) < 0.0005 && Math.abs(stations[i].y - e.lngLat.lat) < 0.0005){
+						  console.log("matched with id:", stations[i].id);
+						  cafes = stations[i].cafes || [];
+						  for(j=0;j<cafes.length;j++) {
+							  var el = document.createElement('div');
+							  /* Assign a unique `id` to the marker. */
+							  el.id = "marker-" +cafes[j].id;
+							  /* Assign the `marker` class to each marker for styling. */
+							  el.className = cafes[j].className;
+							  var marker1 = new mapboxgl.Marker(el)
+							 .setLngLat([cafes[j].x, cafes[j].y])
+							 .addTo(map);
+						  }
+					} else {
+						  console.log("not matched with id:", stations[i].id);
+						  cafes = stations[i].cafes || [];
+						  for(j=0;j<cafes.length;j++) {
+
+							  /* Assign a unique `id` to the marker. */
+							  el = document.getElementById("marker-" +cafes[j].id);
+
+							  var marker1 = new mapboxgl.Marker(el)
+							  .setLngLat([cafes[j].x, cafes[j].y])
+							  .addTo(map);
+							  marker1.remove();
+						   }
+						}
+				}
+			}
+			
+			var stopm = document.createElement('div');
+			stopm.className = "marker-stop";
+			var markers = new mapboxgl.Marker(stopm)
+					 .setLngLat(coordinates)
+					 .addTo(map);
+
+			var a = e.features[0].properties['9AM']
+			var b = e.features[0].properties['9PM']
+			if(a == 'N'){
+				a = ""
+			}
+			if(b == 'N'){
+				b = ""
+			}
+
+			document.getElementById("stopName").textContent = e.features[0].properties.name+' #' + e.features[0].properties.stop_no;
+			document.getElementById("9am").textContent = a;
+			document.getElementById("10am").textContent = e.features[0].properties['10AM'];
+			document.getElementById("12pm").textContent = e.features[0].properties['12PM'];
+			document.getElementById("9pm").textContent = b;
+			document.getElementById("legend").style.display = 'block';
+			if(checks == 0){
+				checks = 1;
+			}
+			else if(checks == 1){
+				checks = 2;
+			}
+			new mapboxgl.Popup()
+				.setMaxWidth("1000px")
+				.setLngLat(coordinates)
+				.on('close', function(e) {
+					if(document.getElementById("pub").className == "active" && document.getElementById("cafe").className == "active" && document.getElementById("takeaway").className == "active"){
+						for (i=0;i<stations.length;i++) {
+							if (Math.abs(stations[i].x - lng) < 0.0005 && Math.abs(stations[i].y - lat) < 0.0005){
+								console.log("matched with id:", stations[i].id);
+								cafes = stations[i].cafes || [];
+								for(j=0;j<cafes.length;j++) {
+
+								  /* Assign a unique `id` to the marker. */
+								  el = document.getElementById("marker-" +cafes[j].id);
+
+								  var marker1 = new mapboxgl.Marker(el)
+								  .setLngLat([cafes[j].x, cafes[j].y])
+								  .addTo(map);
+								  marker1.remove();
+								}
+							}
+
+						}
+					};
+					
+					markers.remove();
+					if(checks == 2){
+						document.getElementById("legend").style.display = 'block';
+						checks = 1;
+					}
+					else if(checks == 1){
+						document.getElementById("legend").style.display = 'none';
+						checks = 0;
+					} 
+
+				})
+				.addTo(map);
+
+
+		});
+	
+	
+	
+	
+	map.on('click', 'museum', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("1000px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+
+	map.on('click', 'attraction', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("1000px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+
+	map.on('click', 'recreation', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("1000px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	map.on('click', 'railway', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("1000px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	
+	map.on('click', 'Sculpture', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("500px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong>'+e.features[0].properties.title +'</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ' + '<strong style="font-size: 12px"> Makers: '+e.features[0].properties.makers +'\n<p style="font-weight:100; margin-bottom: 0px">Art Date: ' +e.features[0].properties.art_date + '</p></strong>')
+			.addTo(map);
+	});
+	
+	map.on('click', 'Memorials', function (e){
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		new mapboxgl.Popup()
+			.setMaxWidth("500px")
+			.setLngLat(coordinates1)
+			.setHTML('<strong style="font-size: 15px">'+e.features[0].properties.title +'</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ' + '<strong style="font-size: 12px"> Makers: '+e.features[0].properties.makers +'\n<p style="font-weight:100; margin-bottom: 0px">Art Date: ' +e.features[0].properties.art_date + '</p></strong>')
+			.addTo(map);
+	});
+	var popupm = new mapboxgl.Popup({
+		closeButton: false
+	});
+	
+	var popupr = new mapboxgl.Popup({
+		closeButton: false
+	});
+	
+	var popupre = new mapboxgl.Popup({
+		closeButton: false
+	});
+	
+	var popupa = new mapboxgl.Popup({
+		closeButton: false
+	});
+	map.on('mouseenter', 'museum', function (e) {
+		map.getCanvas().style.cursor = 'pointer';
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		popupm.setLngLat(coordinates1)
+			.setMaxWidth("1000px")
+			.setHTML('<strong style="color: black">'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	map.on('mouseleave', 'museum', function (e) {
+			map.getCanvas().style.cursor = '';
+			popupm.remove();
+	});
+	
+	map.on('mouseenter', 'railway', function (e) {
+		map.getCanvas().style.cursor = 'pointer';
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		popupr.setLngLat(coordinates1)
+			.setMaxWidth("1000px")
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	map.on('mouseleave', 'railway', function (e) {
+			map.getCanvas().style.cursor = '';
+			popupr.remove();
+	});
+	
+	map.on('mouseenter', 'recreation', function (e) {
+		map.getCanvas().style.cursor = 'pointer';
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		popupre.setLngLat(coordinates1)
+			.setMaxWidth("1000px")
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	map.on('mouseleave', 'recreation', function (e) {
+			map.getCanvas().style.cursor = '';
+			popupre.remove();
+	});
+	
+	map.on('mouseenter', 'attraction', function (e) {
+		map.getCanvas().style.cursor = 'pointer';
+		var coordinates1 = e.features[0].geometry.coordinates.slice();
+		popupa.setLngLat(coordinates1)
+			.setMaxWidth("1000px")
+			.setHTML('<strong>'+e.features[0].properties.Feature_Na +'</strong>')
+			.addTo(map);
+	});
+	map.on('mouseleave', 'attraction', function (e) {
+			map.getCanvas().style.cursor = '';
+			popupa.remove();
+	});
+	
+	map.on('mouseenter', 'tram_stop', function () {
+		map.getCanvas().style.cursor = 'pointer';
+	});
+ 
+
+// Change it back to a pointer when it leaves.
+	map.on('mouseleave', 'tram_stop', function () {
+		map.getCanvas().style.cursor = '';
+	});
+	
+	map.on('mouseenter', 'Sculpture', function () {
+		map.getCanvas().style.cursor = 'pointer';
+	});
+ 
+// Change it back to a pointer when it leaves.
+	map.on('mouseleave', 'Sculpture', function () {
+		map.getCanvas().style.cursor = '';
+	});
+	
+	map.on('mouseenter', 'Memorials', function () {
+		map.getCanvas().style.cursor = 'pointer';
+	});
+ 
+// Change it back to a pointer when it leaves.
+	map.on('mouseleave', 'Memorials', function () {
+		map.getCanvas().style.cursor = '';
+	});
+	
+});
+
+	
+// code from the next step will go here!
+
+	
+</script>
+<script language = "javascript" type="text/javascript">
+            var arr = new Array();
+            arr[0] = "1.png";
+            arr[1] = "2.png";
+            arr[2] = "3.png";
+            arr[3] = "4.png";
+            arr[4] = "5.png";
+		 	arr[5] = "6.png";
+		 	arr[6] = "7.png";
+		 	arr[7] = "8.png";
+		 	arr[8] = "9.png";
+		 	arr[9] = "10.png";
+            var index = 0;
+		 var timeInterval=3000;
+	 	setInterval(changeImg,timeInterval);
+        function changeImg()
+        {
+            var obj=document.getElementById("showpic");
+            if (index==arr.length-1)
+            {
+                index=0;
+            }
+            else
+            {
+                index+=1;
+            }
+            obj.src="pic/p"+arr[index];
+        }
+            function upNext(showpic) {
+            var action;
+            var width = showpic.width;
+            var height = showpic.height;
+           showpic.onmousemove = function () {
+                if (window.event.offsetX < width / 2) {
+                    action = 'left'
+                    showpic.style.cursor = 'url(img/arr_left.cur),auto';
+                } 
+                else {
+                    showpic.style.cursor = 'url(img/arr_right.cur),auto';
+                    action = 'right';
+                }
+            }
+            showpic.onmouseup = function () {
+                if (action == 'left') {
+                   if(index==0)
+                       index=9 ;
+                   else
+                       index--;
+                }
+                else {
+                  if(index == 9)
+                    index=0;
+                  else
+                      index ++ ;
+                }
+                this.src = 'pic/p'+arr[index];
+            }
+        }
+        </script>
+</html>
