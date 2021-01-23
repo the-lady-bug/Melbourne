@@ -1,0 +1,873 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9584257,-37.82096278 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Aquarium",
+    "Number of Records":"1",
+    "Sub_Theme":"Aquarium",
+    "Theme":"Purpose Built",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9654639,-37.80776441 ]
+    },
+    "properties": {
+    "Feature_Na":"Old Melbourne Gaol Crime & Justice Experience",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9534781,-37.82425743 ]
+    },
+    "properties": {
+    "Feature_Na":"Polly Woodside",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9672529,-37.82660454 ]
+    },
+    "properties": {
+    "Feature_Na":"Australian Centre for Contemporary Art",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9688373,-37.82199473 ]
+    },
+    "properties": {
+    "Feature_Na":"Victorian Arts Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.969899,-37.81748314 ]
+    },
+    "properties": {
+    "Feature_Na":"The Ian Potter Centre: NGV Australia",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 0,-37.81886627 ]
+    },
+    "properties": {
+    "Feature_Na":"Thoroughbred Racing Gallery",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9484967,-37.82137443 ]
+    },
+    "properties": {
+    "Feature_Na":"Fox Classic Car Collection",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9716907,-37.80355181 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Museum",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9846698,-37.81895449 ]
+    },
+    "properties": {
+    "Feature_Na":"National Sports Museum",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.980555,-37.81454075 ]
+    },
+    "properties": {
+    "Feature_Na":"Sinclair's Cottage",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.95404,-37.82221828 ]
+    },
+    "properties": {
+    "Feature_Na":"Victoria Police Museum",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9604268,-37.81917988 ]
+    },
+    "properties": {
+    "Feature_Na":"Immigration Museum",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9753737,-37.80857613 ]
+    },
+    "properties": {
+    "Feature_Na":"Fire Services Museum Victoria",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9641567,-37.79739396 ]
+    },
+    "properties": {
+    "Feature_Na":"The Ian Potter Museum Of Art",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9540279,-37.81338543 ]
+    },
+    "properties": {
+    "Feature_Na":"Koorie Heritage Trust Inc",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9794713,-37.81446049 ]
+    },
+    "properties": {
+    "Feature_Na":"Cooks' Cottage",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9690704,-37.81761073 ]
+    },
+    "properties": {
+    "Feature_Na":"Australian Centre For The Moving Image (ACMI)",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9692339,-37.81076861 ]
+    },
+    "properties": {
+    "Feature_Na":"The Museum Of Australian Chinese History",
+    "Number of Records":"1",
+    "Sub_Theme":"Art Gallery/Museum",
+    "Theme":"Place Of Assembly",
+    "Classification":"Art Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9573129,-37.82357611 ]
+    },
+    "properties": {
+    "Feature_Na":"Crown Entertainment Complex",
+    "Number of Records":"1",
+    "Sub_Theme":"Casino",
+    "Theme":"Purpose Built",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9356553,-37.81423185 ]
+    },
+    "properties": {
+    "Feature_Na":"Central City Studios",
+    "Number of Records":"1",
+    "Sub_Theme":"Film & RV Studio",
+    "Theme":"Purpose Built",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9458233,-37.81585723 ]
+    },
+    "properties": {
+    "Feature_Na":"Channel 7 - Melbourne Broadcast Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Film & RV Studio",
+    "Theme":"Purpose Built",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9543524,-37.82524551 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Exhibition Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Function/Conference/Exhibition Centre",
+    "Theme":"Place Of Assembly",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9522883,-37.82490405 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Convention Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Function/Conference/Exhibition Centre",
+    "Theme":"Place Of Assembly",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.943475,-37.81651773 ]
+    },
+    "properties": {
+    "Feature_Na":"Central Pier",
+    "Number of Records":"1",
+    "Sub_Theme":"Function/Conference/Exhibition Centre",
+    "Theme":"Place Of Assembly",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9813834,-37.80973741 ]
+    },
+    "properties": {
+    "Feature_Na":"Dallas Brooks Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Function/Conference/Exhibition Centre",
+    "Theme":"Place Of Assembly",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9672913,-37.81488558 ]
+    },
+    "properties": {
+    "Feature_Na":"The Melbourne Athenaeum Library",
+    "Number of Records":"1",
+    "Sub_Theme":"Library",
+    "Theme":"Place Of Assembly",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.947581,-37.785786 ]
+    },
+    "properties": {
+    "Feature_Na":"State Netball Hockey Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9619678,-37.78408644 ]
+    },
+    "properties": {
+    "Feature_Na":"Carlton Football Club",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9619826,-37.78343039 ]
+    },
+    "properties": {
+    "Feature_Na":"Visy Park",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.912143,-37.79080826 ]
+    },
+    "properties": {
+    "Feature_Na":"Flemington Racecourse",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9834029,-37.81949216 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Cricket Ground (MCG)",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.983803,-37.82472527 ]
+    },
+    "properties": {
+    "Feature_Na":"AAMI Park",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9784872,-37.82204561 ]
+    },
+    "properties": {
+    "Feature_Na":"Rod Laver Arena",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9787358,-37.8209086 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Park",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9775911,-37.82132521 ]
+    },
+    "properties": {
+    "Feature_Na":"Margaret Court Arena",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9432908,-37.799947 ]
+    },
+    "properties": {
+    "Feature_Na":"North Melbourne Recreation Centre (Aquatic)",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9631898,-37.80715854 ]
+    },
+    "properties": {
+    "Feature_Na":"City Baths",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9797203,-37.82424569 ]
+    },
+    "properties": {
+    "Feature_Na":"Westpac Centre",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9474963,-37.81617605 ]
+    },
+    "properties": {
+    "Feature_Na":"Etihad Stadium",
+    "Number of Records":"1",
+    "Sub_Theme":"Major Sports & Recreation Facility",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9375889,-37.81161637 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Star Observation Wheel",
+    "Number of Records":"1",
+    "Sub_Theme":"Observation Tower/Wheel",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9646222,-37.82161876 ]
+    },
+    "properties": {
+    "Feature_Na":"Eureka Skydeck 88",
+    "Number of Records":"1",
+    "Sub_Theme":"Observation Tower/Wheel",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Attractions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9513712,-37.78444493 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Zoo",
+    "Number of Records":"1",
+    "Sub_Theme":"Outdoor Recreation Facility (Zoo, Golf Course)",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9368337,-37.81169454 ]
+    },
+    "properties": {
+    "Feature_Na":"Wonderland Park",
+    "Number of Records":"1",
+    "Sub_Theme":"Outdoor Recreation Facility (Zoo, Golf Course)",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9156071,-37.79483753 ]
+    },
+    "properties": {
+    "Feature_Na":"Riverside Park",
+    "Number of Records":"1",
+    "Sub_Theme":"Outdoor Recreation Facility (Zoo, Golf Course)",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9108221,-37.78230979 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Showgrounds",
+    "Number of Records":"1",
+    "Sub_Theme":"Outdoor Recreation Facility (Zoo, Golf Course)",
+    "Theme":"Leisure/Recreation",
+    "Classification":"Recreation Facility"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9392778,-37.78816459 ]
+    },
+    "properties": {
+    "Feature_Na":"Flemington Bridge Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9529447,-37.81816331 ]
+    },
+    "properties": {
+    "Feature_Na":"Southern Cross Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9563182,-37.81223565 ]
+    },
+    "properties": {
+    "Feature_Na":"Flagstaff Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9894008,-37.82389927 ]
+    },
+    "properties": {
+    "Feature_Na":"Richmond Railway Station (Richmond) - Train stop",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.983641,-37.81656518 ]
+    },
+    "properties": {
+    "Feature_Na":"Jolimont-MCG Railway Station (East Melbourne) - Train stop",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9307102,-37.79391401 ]
+    },
+    "properties": {
+    "Feature_Na":"Kensington Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9258377,-37.79972705 ]
+    },
+    "properties": {
+    "Feature_Na":"South Kensington Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9516678,-37.78126843 ]
+    },
+    "properties": {
+    "Feature_Na":"Royal Park Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.973,-37.8115 ]
+    },
+    "properties": {
+    "Feature_Na":"Parliament Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 0,-37.81163844 ]
+    },
+    "properties": {
+    "Feature_Na":"Flagstaff Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9081907,-37.78691058 ]
+    },
+    "properties": {
+    "Feature_Na":"Flemington Racecourse Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9149026,-37.78346512 ]
+    },
+    "properties": {
+    "Feature_Na":"Showgrounds Railway Station (Flemington)",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.92906,-37.78727262 ]
+    },
+    "properties": {
+    "Feature_Na":"Newmarket Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9670648,-37.8179063 ]
+    },
+    "properties": {
+    "Feature_Na":"Flinders Street Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9637893,-37.8100167 ]
+    },
+    "properties": {
+    "Feature_Na":"Melbourne Central Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9424298,-37.80738236 ]
+    },
+    "properties": {
+    "Feature_Na":"North Melbourne Railway Station",
+    "Number of Records":"1",
+    "Sub_Theme":"Railway Station",
+    "Theme":"Transport",
+    "Classification":"Railway"
+    }
+  }
+]
+}
